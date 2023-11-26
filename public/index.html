@@ -4,29 +4,26 @@
   <title>Appointment Scheduling</title>
 </head>
 <body>
-  <h1>Create Appointment</h1>
-  <form action="/createAppointment" method="post">
-    <label for="user_id">User ID:</label>
-    <input type="text" id="user_id" name="user_id" required><br>
+  <h1>User Registration</h1>
+  <form action="/register" method="post">
+    <label for="register_user_id">User ID:</label>
+    <input type="text" id="register_user_id" name="register_user_id" required><br>
 
-    <label for="date">Date:</label>
-    <input type="date" id="date" name="date" required><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
 
-    <label for="start_time">Start Time:</label>
-    <input type="time" id="start_time" name="start_time" required><br>
-
-    <label for="end_time">End Time:</label>
-    <input type="time" id="end_time" name="end_time" required><br>
-
-    <button type="submit">Create Appointment</button>
+    <button type="submit">Register</button>
   </form>
 
-  <h1>View Appointments</h1>
-  <form action="/userAppointments" method="get">
-    <label for="user_id">User ID:</label>
-    <input type="text" id="user_id" name="user_id" required><br>
+  <h1>User Login</h1>
+  <form action="/login" method="post">
+    <label for="login_user_id">User ID:</label>
+    <input type="text" id="login_user_id" name="login_user_id" required><br>
 
-    <button type="submit">View Appointments</button>
+    <label for="login_password">Password:</label>
+    <input type="password" id="login_password" name="login_password" required><br>
+
+    <button type="submit">Login</button>
   </form>
 </body>
 </html>
