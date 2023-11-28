@@ -11,7 +11,7 @@
   "description": "",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {}
 }

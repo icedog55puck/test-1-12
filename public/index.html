@@ -25,5 +25,28 @@
 
     <button type="submit">Login</button>
   </form>
+  <h2>Available 3D Printers</h2>
+  <form action="/setAppointment" method="get">
+    <!-- Fetch the list of available printers from the server -->
+    <select id="printer" name="printer" required>
+      <!-- Options will be dynamically populated using JavaScript -->
+    </select><br>
+
+    <button type="submit">Set printer</button>
+  </form>
+
+  <script>
+    // You can add JavaScript to dynamically populate the printer options based on data from the server
+    // For simplicity, I'll just show a static example here
+    const printerSelect = document.getElementById('printer');
+    const printers = ['3D Printer 1', '3D Printer 2']; // You should fetch this data from the server
+
+    printers.forEach(printer => {
+      const option = document.createElement('option');
+      option.value = printer;
+      option.text = printer;
+      printerSelect.add(option);
+    });
+  </script>
 </body>
 </html>

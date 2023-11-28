@@ -29,6 +29,18 @@ db.run(`
     FOREIGN KEY (user_id) REFERENCES users (user_id)
   )
 `);
+app.get('/appointment', (req, res) => {
+  res.sendFile(__dirname + '/appointment_page.html');
+});
+
+// Handle setting an appointment
+app.get('/setAppointment', (req, res) => {
+  const { printer } = req.query;
+  // You can use the printer value to set the appointment
+
+  // For simplicity, let's just send a response indicating success
+  res.status(200).send(`you are malking an appointment for 3D Printer : ${printer}`);
+});
 // Insert a new appointment for a user
 app.post('/createAppointment', (req, res) => {
   const { user_id, date, start_time, end_time } = req.body;
