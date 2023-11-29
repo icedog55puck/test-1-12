@@ -26,6 +26,7 @@ db.run(`
     date TEXT,
     start_time TEXT,
     end_time TEXT,
+    printer TEXT,  -- Add this line to include the printer field
     FOREIGN KEY (user_id) REFERENCES users (user_id)
   )
 `);
@@ -43,8 +44,8 @@ app.get('/setAppointment', (req, res) => {
 });
 // Insert a new appointment for a user
 app.post('/createAppointment', (req, res) => {
-  const { user_id, date, start_time, end_time } = req.body;
-  db.run("INSERT INTO appointments (user_id, date, start_time, end_time) VALUES (?, ?, ?, ?)", [user_id, date, start_time, end_time], function(err) {
+  const { user_id, date, start_time, end_time, printer } = req.body;
+  db.run("INSERT INTO appointments (user_id, date, start_time, end_time, printer) VALUES (?, ?, ?, ?, ?)", [user_id, date, start_time, end_time, printer], function(err) {
     if (err) {
       return res.status(500).send(err.message);
     }
