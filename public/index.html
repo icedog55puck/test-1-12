@@ -49,6 +49,18 @@
     </section>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    // You can add JavaScript to dynamically populate the printer options based on data from the server
+    // For simplicity, I'll just show a static example here
+    const printerSelect = document.getElementById('printer');
+    const printers = ['3D Printer 1', '3D Printer 2']; // You should fetch this data from the server
+
+    printers.forEach(printer => {
+      const option = document.createElement('option');
+      option.value = printer;
+      option.text = printer;
+      printerSelect.add(option);
+    });
+  </script>
 </body>
 </html>
