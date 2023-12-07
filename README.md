@@ -17,7 +17,7 @@
 
 ## Setup and Installation
 Make sure you dowloude Node.js first
-1. Clone the repository
+1. Clone the repository at https://github.com/Ken-Chambers/test-1-12.git
 2. Navigate to a code space and make a new terminal. click top box
    
    ![image](https://github.com/icedog55puck/test-1-12/assets/144482284/5eb36c14-804d-47fd-96b2-d9929ffa4925)
@@ -31,7 +31,8 @@ Make sure you dowloude Node.js first
 
 ![image](https://github.com/Ken-Chambers/test-1-12/assets/144482284/000453e2-4e3a-4791-a4c6-38aa6bdf400f)
 
-6. if an error pops up do these npm in the terminal to fix
+6. if an error pops up do these npm in the terminal to fix or if you get the code from a zip and not a clone
+   
 ##ii) npm i
 
 ##iii) npm install express
