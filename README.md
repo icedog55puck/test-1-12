@@ -16,6 +16,7 @@
 - **SQL**: For databases.
 
 ## Setup and Installation
+Make sure you dowloude Node.js first
 1. Clone the repository
 2. Navigate to the project directory 
 3. Go to run and debugeing on the right side
