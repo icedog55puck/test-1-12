@@ -18,13 +18,27 @@
 ## Setup and Installation
 Make sure you dowloude Node.js first
 1. Clone the repository
-2. Navigate to the project directory 
-3. Go to run and debugeing on the right side
+2. Navigate to a code space and make a new terminal
+   
+   ![image](https://github.com/icedog55puck/test-1-12/assets/144482284/5eb36c14-804d-47fd-96b2-d9929ffa4925)
+
+3. Go to run and debugeing on the left side
+   
+   ![image](https://github.com/icedog55puck/test-1-12/assets/144482284/699662e2-bb5b-4773-9508-ae520175e7bd)
+
 4. in the box below make sure you pick node.js then run script start
 5. then click the green play
 
 ![image](https://github.com/Ken-Chambers/test-1-12/assets/144482284/000453e2-4e3a-4791-a4c6-38aa6bdf400f)
 
+6. if an error pops up do these npm in the terminal to fix
+##ii) npm i
 
+##iii) npm install express
 
+##iv) npm install body-parser
+
+##v) npm install sqlite3
+
+##vi) npm init
 
