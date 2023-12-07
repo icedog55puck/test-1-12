@@ -59,7 +59,22 @@ app.get('/userAppointments', (req, res) => {
     if (err) {
       return res.status(500).send(err.message);
     }
-    res.status(200).json(rows);
+
+    if (rows.length === 0) {
+      return res.status(200).send('No appointments found for this user.');
+    }
+
+    let htmlResponse = '<h1>User Appointments</h1>';
+    htmlResponse += '<table border="1">';
+    htmlResponse += '<tr><th>ID</th><th>Date</th><th>Start Time</th><th>End Time</th><th>Printer</th></tr>';
+
+    rows.forEach(row => {
+      htmlResponse += `<tr><td>${row.id}</td><td>${row.date}</td><td>${row.start_time}</td><td>${row.end_time}</td><td>${row.printer}</td></tr>`;
+    });
+
+    htmlResponse += '</table>';
+
+    res.status(200).send(htmlResponse);
   });
 });
 // Handle user registration

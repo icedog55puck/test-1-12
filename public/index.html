@@ -1,39 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Appointment Scheduling</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <h1>User Registration</h1>
-  <form action="/register" method="post">
-    <label for="register_user_id">User ID:</label>
-    <input type="text" id="register_user_id" name="register_user_id" required><br>
+  <div class="container">
+    <section class="user-registration">
+      <h1>User Registration</h1>
+      <form action="/register" method="post">
+        <div class="form-group">
+          <label for="register_user_id">User ID:</label>
+          <input type="text" id="register_user_id" name="register_user_id" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit">Register</button>
+      </form>
+    </section>
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required><br>
+    <section class="user-login">
+      <h1>User Login</h1>
+      <form action="/login" method="post">
+        <div class="form-group">
+          <label for="login_user_id">User ID:</label>
+          <input type="text" id="login_user_id" name="login_user_id" required>
+        </div>
+        <div class="form-group">
+          <label for="login_password">Password:</label>
+          <input type="password" id="login_password" name="login_password" required>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </section>
 
-    <button type="submit">Register</button>
-  </form>
-
-  <h1>User Login</h1>
-  <form action="/login" method="post">
-    <label for="login_user_id">User ID:</label>
-    <input type="text" id="login_user_id" name="login_user_id" required><br>
-
-    <label for="login_password">Password:</label>
-    <input type="password" id="login_password" name="login_password" required><br>
-
-    <button type="submit">Login</button>
-  </form>
-  <h2>Available 3D Printers</h2>
-  <form action="/setAppointment" method="get">
-    <!-- Fetch the list of available printers from the server -->
-    <select id="printer" name="printer" required>
-      <!-- Options will be dynamically populated using JavaScript -->
-    </select><br>
-
-    <button type="submit">Set</button>
-  </form>
+    <section class="available-printers">
+      <h2>Available 3D Printers</h2>
+      <form action="/setAppointment" method="get">
+        <select id="printer" name="printer" required>
+          <!-- Options will be dynamically populated using JavaScript -->
+        </select>
+        <button type="submit">Set</button>
+      </form>
+    </section>
+  </div>
 
   <script>
     // You can add JavaScript to dynamically populate the printer options based on data from the server
